@@ -12,24 +12,16 @@
 		<meta name="keywords" content="云上迦南,云上迦南网站,基督教,保守主义,信仰,耶稣,善商,香柏" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<script>
-    // 定义一个函数用于将查询参数附加到链接上
-    function appendQueryParams() {
-        // 获取当前 URL 的查询字符串
-        const queryString = window.location.search;
-
-        // 选择链接元素
-        const linkElement = document.getElementById('dynamic-link');
-
-        // 如果查询字符串存在，则将其附加到链接的 href 属性中
-        if (queryString) {
-            linkElement.href += queryString;
-        }
-    }
-
-    // 确保页面加载完成后调用函数以更新链接
-    window.onload = appendQueryParams;
-</script>
+		<script>
+			function appendQueryParams() {
+				const queryString = window.location.search.substring(1);
+				const linkElement = document.getElementById('dynamic-link');
+				if (queryString) {
+					linkElement.href += queryString;
+				}
+			}
+			window.onload = appendQueryParams;
+		</script>
 	</head>
 	<body class="is-preload">
 
