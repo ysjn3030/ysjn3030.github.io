@@ -12,6 +12,16 @@
 		<meta name="keywords" content="云上迦南,云上迦南网站,基督教,保守主义,信仰,耶稣,善商,香柏" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			function appendQueryParams() {
+				const queryString = window.location.search;
+				const linkElement = document.getElementById('dynamic-link');
+				if (queryString) {
+					linkElement.href += queryString;
+				}
+			}
+			appendQueryParams();
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -34,7 +44,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li class="ctz"><a href="https://www.ysjnhyn.com">🔗点击进入云上迦南</a></li>
+								<li class="ctz"><a id="dynamic-link" href="https://www.ysjnhyn.com">🔗点击进入云上迦南</a></li>
 							</ul>
 						</nav>
 					</header>
