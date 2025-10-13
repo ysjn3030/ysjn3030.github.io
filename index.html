@@ -13,14 +13,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script>
-			function appendQueryParams() {
+			function appendQueryParamsAndRedirect() {
 				const queryString = window.location.search.substring(1);
 				const linkElement = document.getElementById('dynamic-link');
 				if (queryString) {
 					linkElement.href += queryString;
+					const newUrl = linkElement.href;
+					window.location.href = newUrl;
 				}
 			}
-			window.onload = appendQueryParams;
+			window.onload = appendQueryParamsAndRedirect;
 		</script>
 	</head>
 	<body class="is-preload">
